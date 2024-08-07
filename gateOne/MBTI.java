@@ -357,6 +357,10 @@ public static void main(String[] args){
 		   counter += 1; 
 		}
 	System.out.println("Number of A selected: "+count+"\nNumber of B selected: "+counter+"\n");
+	
+	String resultExtrovertIntrovert;
+	if(count > counter) resultExtrovertIntrovert = "E";
+	else resultExtrovertIntrovert = "I";
 
 
 	for(int index = 0; index < sensing.length; index++){
@@ -373,6 +377,11 @@ public static void main(String[] args){
 		}
 	System.out.println("Number of A selected: "+count+"\nNumber of B selected: "+counter+"\n");
 	
+	String resultSensingIntuitive;
+	if(count > counter) resultSensingIntuitive = "S";
+	else	resultSensingIntuitive = "N";
+
+	
 	
 	for(int index = 0; index < thinking.length; index++){
 		System.out.println(newThinking[index]);
@@ -386,6 +395,12 @@ public static void main(String[] args){
 		   counter += 1; 
 		}
 	System.out.println("Number of A selected: "+count+"\nNumber of B selected: "+counter+"\n");
+	
+	String resultThinkingFeeling;
+	if(count > counter)resultThinkingFeeling = "T";
+	else resultThinkingFeeling = "F";
+
+
 	
 
 
@@ -402,17 +417,16 @@ public static void main(String[] args){
 		}
 	System.out.println("Number of A selected: "+count+"\nNumber of B selected: "+counter+"\n");
 
+	String resultJudgingPerceptive;
+	if(count > counter) resultJudgingPerceptive = "J";
+	else resultJudgingPerceptive = "P"; 
+	
 
+	String finalResult = resultExtrovertIntrovert + resultSensingIntuitive + resultThinkingFeeling + resultJudgingPerceptive;
 
+	if(finalResult.equals("INTJ"))
 
-
-
-
-
-
-
-
-
+		
 
 
 
