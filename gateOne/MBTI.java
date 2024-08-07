@@ -38,7 +38,7 @@ public static void main(String[] args){
    
 		
 
-	sensing[0] = "flag";
+	sensing[ 0] = "flag";
 	while(!sensing[0].equalsIgnoreCase("A") && !sensing[0].equalsIgnoreCase("B")){
 	System.out.print("\n2. A. Interpret literally, \t B. look for meaning and possibilities\n");
 	sensing[0] = scanner.nextLine();
@@ -170,7 +170,7 @@ public static void main(String[] args){
 
 	sensing[2] = "flag";
 	while(!sensing[2].equalsIgnoreCase("A") && !sensing[2].equalsIgnoreCase("B")){	
-	System.out.print("\n10. A. standard, usual, conventional \t B. different, novel, unique");
+	System.out.print("\n10. A. standard, usual, conventional \t B. different, novel, unique\n");
 	sensing[2] = scanner.nextLine();
 	if(!sensing[2].equalsIgnoreCase("A") && !sensing[2].equalsIgnoreCase("B"))
 		System.out.print("Expected A or B as Response\n I know this is an error, Please retry again");
@@ -424,7 +424,9 @@ public static void main(String[] args){
 
 	String finalResult = resultExtrovertIntrovert + resultSensingIntuitive + resultThinkingFeeling + resultJudgingPerceptive;
 
-	if(finalResult.equals("INTJ"))
+	MbtiFunctions function = new MbtiFunctions();
+	String result = function.finalResult(finalResult);
+	System.out.print("\n"+result);
 
 		
 
