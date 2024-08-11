@@ -75,6 +75,7 @@ public static void main(String[] args){
 			
 			System.out.print("\nHow much do you want to deposit: \n");
 			double account = scanner.nextLong();
+			if(account > 0){
 			
 			int index = accountNumber.indexOf(receiver);
 			if(index != -1){
@@ -95,7 +96,11 @@ public static void main(String[] args){
 					}
 			
 			else 
-			System.out.print("Account number does exits.");
+			System.out.print("\nAccount number does exits.\n");
+			}
+			else 
+				System.out.print("\nInvalid Amount.");		
+		
 			System.out.print("Enter 1 to go back to main menu or 8 to end: \n");
 		appOpening = scanner.nextInt();
 
