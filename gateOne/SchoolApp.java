@@ -15,7 +15,7 @@ int totalSubject = scanner.nextInt();
  
 int [][] student = new int [studentNumber][totalSubject];
 int [] total = new int [studentNumber];
-int [] newTotal =  new int [studentNumber];
+int [] newTotal =  new int [studentNumber]; 
 double [] average = new double [studentNumber];
 int [] position = new int [studentNumber];
 
@@ -74,6 +74,69 @@ for(int index = 0, counter = 1; index < studentNumber; index++, counter++){
 				System.out.println();
 
 					}
+
+
+
+System.out.println("\nSUBJECT SUMMARY");
+
+
+			
+			for(int index = 0; index < totalSubject; index++){
+
+				
+		
+			int largest = -1;
+			int smallest = 101;
+			int highestStudent = 0;
+			int lowestStudent = 0; 
+			int totalSubjectOfStudent = 0;
+			int totalScoreOfStudent = 0;
+			int pass = 0;
+			int fail = 0;
+				
+				for(int element = 0; element < studentNumber; element++){
+					
+					totalScoreOfStudent += student[element][index];
+			  		if(student [element][index] >= 40){
+						pass += 1;
+					}
+					else{
+						fail += 1;
+					}
+					if(student [element][index] > largest){
+					 largest = student[element][index];
+					 highestStudent = element + 1;
+					}
+					 if(student[element][index] < smallest){
+					 smallest = student[element][index];
+					 lowestStudent = element + 1;
+						}
+				}
+
+			
+			double averageTotalScoreOfStudent = totalScoreOfStudent /  studentNumber;
+			System.out.println("\n\nSubject "+(index + 1));
+
+			System.out.println("Highest scoring student is:  Student "+highestStudent+" scoring "+largest);
+			System.out.println("Lowest scoring student is:  Student "+lowestStudent+ " scoring "+smallest);
+			System.out.println("Total Score is:  "+totalScoreOfStudent);
+			System.out.printf("Average score is %.2f: ", averageTotalScoreOfStudent);
+			System.out.println("\nNumber of Passes: "+pass+"\nNumber of Fails: "+fail);
+				}
+		
+				
+	
+
+
+
+		
+
+
+ 
+
+
+
+
 
 	
 

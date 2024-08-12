@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner; 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -34,7 +34,6 @@ LocalDate ovalutionHitDay = ovalutionStartDate.plusDays(flowDate-2);
 LocalDate ovalutionEndDate = ovalutionHitDay.plusDays(flowDate-1);
 
 LocalDate secondSafePeriodStarts = ovalutionEndDate.plusDays(1);
-
 
 LocalDate secondSafePeriodEnds = nextFlowDate.plusDays(cycleDays);
 
