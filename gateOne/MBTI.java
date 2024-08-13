@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Arrays;
-public class MBTI{
+public class Mbti{
 public static void main(String[] args){
 
 	Scanner scanner = new Scanner(System.in);

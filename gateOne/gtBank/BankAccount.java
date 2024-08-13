@@ -312,13 +312,6 @@ public static void main(String[] args){
 			}
 
 
-	System.out.println(accountNumber);
-	System.out.println(accountBalance);
-	System.out.println(accountPin);
-	System.out.println(accountName);
-
-
-
 
 
 

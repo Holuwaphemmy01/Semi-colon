@@ -4,11 +4,17 @@ import java.time.format.DateTimeFormatter;
 
 public class MenstrualApp{
 public static void main(String[] args){
-
+ 
 Scanner scanner = new Scanner(System.in);
 DateTimeFormatter newFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-System.out.print("Enter the last day you have your period: ");
+String userInformation = """
+			Welcome to Semicolon menstrual app.
+			Kindly follow the information below to get your mestrual date and info.
+			""";
+System.out.println(userInformation);   
+
+System.out.println("Enter the last day you have your period: ");
 String lastDateOfFlow = scanner.next();
 
 System.out.print("How many days did you always see your flow: ");
