@@ -85,7 +85,6 @@ public class StackTest {
         stack.push("Oluwafemi");
         stack.push("femzy");
         stack.push("Akinzo");
-        Assertions.assertTrue(stack.push("Akin"));
-        Assertions.assertTrue(stack.isFull());
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {stack.push("Akinzo");});
     }
 }

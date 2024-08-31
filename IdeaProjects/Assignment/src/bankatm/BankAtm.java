@@ -3,12 +3,14 @@ package bankatm;
 import java.util.Scanner;
 
 public class BankAtm {
+    static Bank bank = new Bank();
+
     public static void main(String[] args) {
         gotoMainMethod();
     }
 
+
     private static void gotoMainMethod() {
-        Bank bank = new Bank();
         String welcome = """
                 Welcome to the Bank Atm!!!
                 1. Create Account.
@@ -33,14 +35,14 @@ public class BankAtm {
                     print("This is your account number: " + accountNumber);
                     print("Account created successfully");
                     gotoMainMethod();
-                    break;
+
 
             case 2: amount = Double.parseDouble(input("Enter Your Amount"));
                     int receiverAccountNumber = Integer.parseInt(input("Enter receiver  Account number: "));
                     bank.depositFor(amount, receiverAccountNumber);
                     print("Deposited " + amount + " to " + receiverAccountNumber+ "\nDeposit successfully");
                     gotoMainMethod();
-                    break;
+
 
             case 3: accountNumber = Integer.parseInt(input("Enter your account number: "));
                     pin = input("Enter your  account pin");

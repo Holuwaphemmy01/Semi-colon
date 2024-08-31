@@ -12,13 +12,13 @@ public class Stack {
         return stackSize == 0;
     }
 
-    public boolean push(String element) {
-        if (stackSize <= stackArray.length-1) {
+    public void push(String element) {
+        if (isFull()) throw new IllegalArgumentException("Stack is full");
+
+        else {
             stackArray[stackSize] = element;
             stackSize++;
-            return false;
         }
-        else return true;
     }
 
     public String pop() {
