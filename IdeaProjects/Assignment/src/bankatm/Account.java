@@ -37,7 +37,7 @@ public class Account {
     }
 
     public void updatePin(String oldPin, String newPin) {
-        if(oldPin.equalsIgnoreCase(this.pin))
+        if(oldPin.equals(this.pin))
             this.pin = newPin;
     }
 }

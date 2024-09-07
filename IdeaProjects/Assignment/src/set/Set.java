@@ -36,7 +36,7 @@ public class Set {
             if (arraySet[index] == value) {
                 size--;
                 return arraySet[index];
-            }
+             }
         }
             throw new IllegalArgumentException(value+ "doesn't exist");
 
