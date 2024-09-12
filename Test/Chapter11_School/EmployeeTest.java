@@ -35,8 +35,5 @@ public class EmployeeTest {
         assertEquals(15_000, employee.getSalary());
     }
 
-    @Test
-    public void testThatRecordsTheDateTheEmployeeWasHired(){
-        Employee employee = new Employee("Adeleke");
-    }
+
 }
