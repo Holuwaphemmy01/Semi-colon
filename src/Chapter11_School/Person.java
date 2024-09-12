@@ -10,12 +10,32 @@ public class Person {
 
     }
 
-    public Person(String name, String Street, String number, String mail) {
+    public Person(String name) {
+        this.name=name;
+    }
+
+    public Person(String name, String mail) {
+        this.name = name;
+        this.mail = mail;
+    }
+
+    public Person(String name, String mail, String address) {
+        this.name = name;
+        this.mail = mail;
+        this.address = address;
+    }
+
+
+    public Person(String name, String mail, String Street, String number) {
         this.name = name;
         this.number = number;
         this.address = Street;
         this.mail = mail;
 
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getName() {
