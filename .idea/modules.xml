@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/CHAPTER 11.iml" filepath="$PROJECT_DIR$/CHAPTER 11.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/personal-learning.iml" filepath="$PROJECT_DIR$/personal-learning.iml" />
+>>>>>>> 0f33a3e8451fc47ae618ec96e523f15e989ced76
     </modules>
   </component>
 </project>
