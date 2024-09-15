@@ -34,7 +34,7 @@ for(int index = 0, counter = 1; index < studentNumber; index++, counter++){
 
 					}
 		total[index] = sum;
-		newTotal[index] = sum;
+		newTotal[index] = sum; 
 		average[index] = sum / totalSubject;
 		
 					}
@@ -82,8 +82,6 @@ System.out.println("\nSUBJECT SUMMARY");
 
 			
 			for(int index = 0; index < totalSubject; index++){
-
-				
 		
 			int largest = -1;
 			int smallest = 101;
