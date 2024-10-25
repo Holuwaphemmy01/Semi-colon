@@ -72,4 +72,6 @@ public class DiaryTest {
         int result = diaryRepositoriesImply.count();
         assertEquals(2, result);
     }
+
+
 }

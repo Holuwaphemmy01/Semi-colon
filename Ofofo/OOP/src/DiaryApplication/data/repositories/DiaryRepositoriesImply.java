@@ -27,15 +27,10 @@ public class DiaryRepositoriesImply implements DiaryRepositories {
     public void delete(Diary diary) {
         for(int index = 0; index < diaries.size(); index++) {
             if(diaries.get(index).equals(diary)) {
-                System.out.println(diaries);
                 diaries.remove(diary);
             }
         }
-//       for(Diary diarys: diaries){
-//           if(diarys.getTitle()==(diary.getTitle())){
-//               diaries.remove(diarys);
-//           }
-//       }
+
     }
 
     @Override
