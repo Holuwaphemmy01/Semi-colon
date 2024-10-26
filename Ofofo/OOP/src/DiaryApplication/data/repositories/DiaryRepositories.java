@@ -1,6 +1,6 @@
 package DiaryApplication.data.repositories;
 
-import DiaryApplication.models.Diary;
+import DiaryApplication.data.models.Diary;
 
 import java.util.List;
 
@@ -9,6 +9,5 @@ public interface DiaryRepositories {
     List<Diary> findByTitle(String title);
     void delete(Diary diary);
     int count();
-    String findById(String userName);
-
+    Diary findById(String userName);
 }

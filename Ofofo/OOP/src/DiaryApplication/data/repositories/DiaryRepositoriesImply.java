@@ -1,6 +1,8 @@
 package DiaryApplication.data.repositories;
 
-import DiaryApplication.models.Diary;
+
+
+import DiaryApplication.data.models.Diary;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +17,6 @@ public class DiaryRepositoriesImply implements DiaryRepositories {
     public void saveDiary(Diary diary) {
         diaries.add(diary);
         numberOfDiaries++;
-
     }
 
     @Override
@@ -39,14 +40,21 @@ public class DiaryRepositoriesImply implements DiaryRepositories {
     }
 
     @Override
-    public String findById(String userName) {
-        for(int index = 0; index < numberOfDiaries; index++) {
-            if(diaries.get(index).getUsername().equals(userName)) {
-                return toStrings(diaries.get(index));
+    public Diary findById(String userName) {
+        for(Diary diary : diaries) {
+            if(diary.getUsername().equals(userName)) {
+                return diary;
             }
         }
+//        for(int index = 0; index < numberOfDiaries; index++) {
+//            if(diaries.get(index).getUsername().equals(userName)) {
+//                return toStrings(diaries.get(index));
+//            }
+//        }
        return null;
     }
+
+
 
 
     public String toStrings(Diary diary) {

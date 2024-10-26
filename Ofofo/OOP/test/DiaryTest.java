@@ -1,16 +1,13 @@
+import DiaryApplication.data.models.Diary;
 import DiaryApplication.data.repositories.DiaryRepositoriesImply;
-import DiaryApplication.models.Diary;
 import org.junit.jupiter.api.Test;
-
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class DiaryTest {
 
-    private DiaryRepositoriesImply diaryRepositoriesImply = new DiaryRepositoriesImply();
+    private final DiaryRepositoriesImply diaryRepositoriesImply = new DiaryRepositoriesImply();
     @Test
     public void testThatDiaryIsEmpty(){
         assertEquals(0, diaryRepositoriesImply.count());
@@ -43,9 +40,8 @@ public class DiaryTest {
         diaryRepositoriesImply.saveDiary(diary1);
         diaryRepositoriesImply.saveDiary(diary2);
         diaryRepositoriesImply.saveDiary(diary3);
-        String result = String.valueOf(diaryRepositoriesImply.findById("adeleke"));
-        String expected = "Diary{username='adeleke', title='null', password='password1'}";
-        assertEquals(expected, result);
+        Diary result = diaryRepositoriesImply.findById("adeleke");
+        assertEquals(diary2, result);
     }
 
     @Test
@@ -56,7 +52,7 @@ public class DiaryTest {
         diaryRepositoriesImply.saveDiary(diary1);
         diaryRepositoriesImply.saveDiary(diary2);
         diaryRepositoriesImply.saveDiary(diary3);
-        String result = diaryRepositoriesImply.findById("maribo");
+        Diary result = diaryRepositoriesImply.findById("maribo");
         assertNull(result);
     }
 
@@ -73,5 +69,15 @@ public class DiaryTest {
         assertEquals(2, result);
     }
 
+    @Test
+    public void testToFindByTitile(){
+        Diary diary1 = new Diary("Oluwafemi","password");
+        diaryRepositoriesImply.saveDiary(diary1);
+        Diary diary2 = new Diary("adeleke","password1");
+        diaryRepositoriesImply.saveDiary(diary2);
+        Diary diary3 = new Diary("femzy","password2");
+        diaryRepositoriesImply.saveDiary(diary3);
+        //diaryRepositoriesImply.findByTitle();
+    }
 
 }
