@@ -5,8 +5,11 @@ public class Entry {
     private String title;
     private String body;
 
-    public Entry(int id, String title, String body) {
-        this.id = id;
+    public Entry(){
+
+    }
+
+    public Entry(String title, String body) {
         this.title = title;
         this.body = body;
     }

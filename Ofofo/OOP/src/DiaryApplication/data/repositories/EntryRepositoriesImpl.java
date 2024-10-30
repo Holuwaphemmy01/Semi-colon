@@ -20,9 +20,7 @@ public class EntryRepositoriesImpl  implements data.repositories.EntryRepositori
                 entries.remove(entry);
             }
         }
-//        for(Entry listOfEntries: entries) {
-//            if(listOfEntries.equals(entry)) entries.remove(entry);
-//        }
+
     }
 
     @Override

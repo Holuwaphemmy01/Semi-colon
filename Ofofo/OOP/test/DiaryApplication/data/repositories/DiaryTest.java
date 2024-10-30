@@ -1,5 +1,6 @@
+package DiaryApplication.data.repositories;
+
 import DiaryApplication.data.models.Diary;
-import DiaryApplication.data.repositories.DiaryRepositoriesImply;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -40,7 +41,7 @@ public class DiaryTest {
         diaryRepositoriesImply.saveDiary(diary1);
         diaryRepositoriesImply.saveDiary(diary2);
         diaryRepositoriesImply.saveDiary(diary3);
-        Diary result = diaryRepositoriesImply.findById("adeleke");
+        Diary result = diaryRepositoriesImply.findByUserName("adeleke");
         assertEquals(diary2, result);
     }
 
@@ -52,7 +53,7 @@ public class DiaryTest {
         diaryRepositoriesImply.saveDiary(diary1);
         diaryRepositoriesImply.saveDiary(diary2);
         diaryRepositoriesImply.saveDiary(diary3);
-        Diary result = diaryRepositoriesImply.findById("maribo");
+        Diary result = diaryRepositoriesImply.findByUserName("maribo");
         assertNull(result);
     }
 

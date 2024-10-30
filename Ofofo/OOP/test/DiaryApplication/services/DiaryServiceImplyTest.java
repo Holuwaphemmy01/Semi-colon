@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DiaryServiceImplyTest {
+public class DiaryServiceImplyTest {
         DiaryServiceImply diaryService = new DiaryServiceImply();
 
     @Test
     void testToRegisterMember() throws Exception {
             diaryService.register("oluwafemi", "password1");
-            assertEquals(1, diaryService.count());
+            assertEquals(1,  diaryService.count());
     }
 
     @Test

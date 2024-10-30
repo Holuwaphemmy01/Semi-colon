@@ -40,21 +40,24 @@ public class DiaryRepositoriesImply implements DiaryRepositories {
     }
 
     @Override
-    public Diary findById(String userName) {
+    public Diary findById(int id) {
+        for(Diary diary : diaries) {
+            if(diary.getDiaryId()== id) {
+                return diary;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Diary findByUserName(String userName) {
         for(Diary diary : diaries) {
             if(diary.getUsername().equals(userName)) {
                 return diary;
             }
         }
-//        for(int index = 0; index < numberOfDiaries; index++) {
-//            if(diaries.get(index).getUsername().equals(userName)) {
-//                return toStrings(diaries.get(index));
-//            }
-//        }
-       return null;
+        return null;
     }
-
-
 
 
     public String toStrings(Diary diary) {

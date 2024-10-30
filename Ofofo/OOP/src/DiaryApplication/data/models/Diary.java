@@ -10,9 +10,18 @@ public class Diary {
     private String username;
     private String password;
     private String title;
+    private int diaryId = 3125;
     private boolean isLocked = true;
     private List<Entry> entries = new ArrayList<>();
-    ;
+
+
+    public int getDiaryId() {
+        return diaryId;
+    }
+
+    public void setDiaryId() {
+        this.diaryId += 1;
+    }
 
     public Diary(){
 
@@ -52,10 +61,10 @@ public class Diary {
     public void setUsername(String username) {
         this.username = username;
     }
-    public List<DiaryApplication.data.repositories.models.Entry> getEntries() {
+    public List<Entry> getEntries() {
         return entries;
     }
-    public void setEntries(List<DiaryApplication.data.repositories.models.Entry> entries) {
+    public void setEntries(List<Entry> entries) {
         this.entries = entries;
     }
 

@@ -4,20 +4,26 @@ import DiaryApplication.data.models.Diary;
 import DiaryApplication.data.repositories.DiaryRepositories;
 import DiaryApplication.data.repositories.DiaryRepositoriesImply;
 
+import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class DiaryServiceImply implements DiaryService {
     private DiaryRepositories diaryRepositories = new DiaryRepositoriesImply();
+    private EntryServiceImply entryService =  new EntryServiceImply();
 
 
+    public void createEntry(String title, String content) {
+        entryService.create(title, content);
+    }
 
     @Override
     public void register(String userName, String password) throws Exception {
 
-        if(diaryRepositories.findById(userName) == null) {
+        if(diaryRepositories.findByUserName(userName) == null) {
             Diary diary = new Diary(userName, password);
             diary.setUsername(userName);
             diary.setPassword(password);
+            diary.setDiaryId();
             diaryRepositories.saveDiary(diary);
         }
 
@@ -26,14 +32,14 @@ public class DiaryServiceImply implements DiaryService {
 
 
 
-    @Override
+
     public int count() {
         return diaryRepositories.count();
     }
 
     @Override
     public Diary Login(String userName, String password) throws Exception{
-        Diary diary = diaryRepositories.findById(userName);
+        Diary diary = diaryRepositories.findByUserName(userName);
         if(!Objects.equals(diary.getUsername(), userName)) throw new Exception();
         else  {
              if(diary.getPassword().equals(password)){
