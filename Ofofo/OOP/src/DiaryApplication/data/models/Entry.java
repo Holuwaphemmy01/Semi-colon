@@ -1,20 +1,23 @@
 package DiaryApplication.data.repositories.models;
 
+import DiaryApplication.data.models.Diary;
+import DiaryApplication.data.repositories.DiaryRepositoriesImply;
+
 public class Entry {
-    private int id;
+    private String id;
     private String title;
     private String body;
 
     public Entry(){
-
     }
 
     public Entry(String title, String body) {
+        this.id = id;
         this.title = title;
         this.body = body;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
@@ -26,7 +29,7 @@ public class Entry {
         this.title = title;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -38,7 +41,8 @@ public class Entry {
         this.body = body;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Entry{" + "id='" + id + '\'' + ", title='" + title + '\'' + ", body='" + body + '\'' + '}';
+    }
 }

@@ -12,7 +12,6 @@ public class Diary {
     private String title;
     private int diaryId = 3125;
     private boolean isLocked = true;
-    private List<Entry> entries = new ArrayList<>();
 
 
     public int getDiaryId() {
@@ -61,13 +60,6 @@ public class Diary {
     public void setUsername(String username) {
         this.username = username;
     }
-    public List<Entry> getEntries() {
-        return entries;
-    }
-    public void setEntries(List<Entry> entries) {
-        this.entries = entries;
-    }
-
 
     public String toString(){
     return STR."Entry{username=\{username}, title='\{title}', password='\{password}'}";

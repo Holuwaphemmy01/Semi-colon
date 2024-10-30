@@ -24,15 +24,28 @@ public class EntryRepositoriesImpl  implements data.repositories.EntryRepositori
     }
 
     @Override
-    public Entry getEntryById(int id) {
-        for(Entry entry: entries){
-            if(entry.getId() == id) return entry;
-        }
-        return null;
-    }
-    @Override
-    public int countEntry() {
+    public int  countEntry() {
         return entries.size();
+    }
+
+
+    @Override
+    public Entry getEntryByIdAndUSerId(String userId, int id) {
+            for (Entry entry : entries) {
+                if (entry.getId().equals(userId+id)) return entry;
+            }
+            return null;
+    }
+
+
+    public int countEntryByUser(String userName) {
+        int number= 0;
+        for(int index = 0; index < entries.size(); index++) {
+            for (Entry entry : entries) {
+                if (entry.getId().equals(userName+(index+1))) number += 1;
+            }
+        }
+        return number;
     }
 
 

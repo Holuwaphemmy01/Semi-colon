@@ -1,8 +1,8 @@
 package DiaryApplication.services;
 
 public interface EntryService {
- void create (String title, String description);
-
+int countEntries(String userName);
+DiaryApplication.data.repositories.models.Entry getEntryByIdAndUSerId(String userId, int entryId);
 
 
 

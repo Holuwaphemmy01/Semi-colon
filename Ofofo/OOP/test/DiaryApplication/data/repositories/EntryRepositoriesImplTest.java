@@ -30,8 +30,6 @@ class EntryRepositoriesImplTest {
         repo.save(entry2);
         repo.save(entry3);
         assertEquals(3, repo.countEntry());
-//        Entry getId = repo.getEntryById(109);
-//        assertEquals(entry2, getId);
     }
 
     @Test

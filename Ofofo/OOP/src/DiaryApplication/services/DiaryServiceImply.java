@@ -9,10 +9,17 @@ import java.util.Objects;
 public class DiaryServiceImply implements DiaryService {
     private DiaryRepositories diaryRepositories = new DiaryRepositoriesImply();
     private EntryServiceImply entryService =  new EntryServiceImply();
+    int counter = 0;
 
 
-    public void createEntry(String title, String content) {
-        entryService.create(title, content);
+    public void createEntry(String userId, String title, String content) {
+        if(diaryRepositories.findByUserName(userId) != null) {
+            counter++;
+            System.out.println("This is your entry id number "+counter);
+            String userEntry = userId+counter;
+            entryService.create(userEntry, title, content);
+
+        }
     }
 
     @Override
@@ -20,9 +27,6 @@ public class DiaryServiceImply implements DiaryService {
 
         if(diaryRepositories.findByUserName(userName) == null) {
             Diary diary = new Diary(userName, password);
-            diary.setUsername(userName);
-            diary.setPassword(password);
-            diary.setDiaryId();
             diaryRepositories.saveDiary(diary);
         }
 
@@ -49,8 +53,16 @@ public class DiaryServiceImply implements DiaryService {
         }
     }
 
-    public int countEntry(){
-        return entryService.countEntries();
+    public DiaryApplication.data.repositories.models.Entry countEntry(String userId, int id) {
+        return entryService.countEntry(userId, id);
+    }
+
+    public DiaryApplication.data.repositories.models.Entry getEntryById(String userId, int id) {
+        return entryService.repositories.getEntryByIdAndUSerId(userId, id);
+    }
+
+    public int countEntryByUser(String userId) {
+        return entryService.countEntries(userId);
     }
 
 }
