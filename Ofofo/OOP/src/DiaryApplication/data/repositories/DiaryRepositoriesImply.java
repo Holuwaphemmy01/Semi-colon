@@ -39,7 +39,7 @@ public class DiaryRepositoriesImply implements DiaryRepositories {
         return diaries.size();
     }
 
-    @Override
+
     public Diary findById(int id) {
         for(Diary diary : diaries) {
             if(diary.getDiaryId()== id) {

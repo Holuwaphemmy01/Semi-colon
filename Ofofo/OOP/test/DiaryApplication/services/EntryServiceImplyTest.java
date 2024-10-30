@@ -12,7 +12,7 @@ class EntryServiceImplyTest {
         diaryServiceImply.register("oluwafemi", "password");
         diaryServiceImply.Login("oluwafemi", "password");
         diaryServiceImply.createEntry("name", "title");
-        assertEquals(1, diaryServiceImply.count());
+        assertEquals(1, diaryServiceImply.countEntry());
     }
 
 
