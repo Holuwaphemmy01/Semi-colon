@@ -9,6 +9,6 @@ public interface DiaryRepositories {
     List<Diary> findByTitle(String title);
     void delete(Diary diary);
     int count();
-    Diary findById(int id);
+//     Diary findById(int id);
     Diary findByUserName(String userName);
 }

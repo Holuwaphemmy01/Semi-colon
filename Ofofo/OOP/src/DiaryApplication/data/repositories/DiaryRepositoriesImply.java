@@ -60,9 +60,7 @@ public class DiaryRepositoriesImply implements DiaryRepositories {
     }
 
 
-    public String toStrings(Diary diary) {
-        return STR."Diary{username='\{diary.getUsername()}', title='\{diary.getTitle()}', password='\{diary.getPassword()}'}";
-    }
+
 
 
 }

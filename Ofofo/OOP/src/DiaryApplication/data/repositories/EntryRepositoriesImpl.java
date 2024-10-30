@@ -31,7 +31,7 @@ public class EntryRepositoriesImpl  implements data.repositories.EntryRepositori
         return null;
     }
     @Override
-    public int count() {
+    public int countEntry() {
         return entries.size();
     }
 

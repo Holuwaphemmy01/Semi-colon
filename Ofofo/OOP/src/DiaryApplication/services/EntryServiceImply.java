@@ -7,6 +7,7 @@ import java.sql.SQLOutput;
 public class EntryServiceImply implements EntryService {
     EntryRepositoriesImpl repositories = new EntryRepositoriesImpl();
 
+
     private int id = 4021;
 
     @Override
@@ -19,7 +20,9 @@ public class EntryServiceImply implements EntryService {
         repositories.save(entry);
     }
 
-
+    public int countEntries(){
+        return repositories.countEntry();
+    }
 
 
 }

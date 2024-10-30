@@ -10,14 +10,14 @@ class EntryRepositoriesImplTest {
 
     @Test
     void testThatEntryIsEmpty() {
-        assertEquals(0, repo.count());
+        assertEquals(0, repo.countEntry());
     }
 
     @Test
     void testToAddEntry() {
         Entry entry = new Entry("Story of my Life", "I am a billionaire when on planet earth");
         repo.save(entry);
-        assertEquals(1, repo.count());
+        assertEquals(1, repo.countEntry());
     }
 
 
@@ -29,7 +29,7 @@ class EntryRepositoriesImplTest {
         repo.save(entry1);
         repo.save(entry2);
         repo.save(entry3);
-        assertEquals(3, repo.count());
+        assertEquals(3, repo.countEntry());
 //        Entry getId = repo.getEntryById(109);
 //        assertEquals(entry2, getId);
     }
@@ -42,7 +42,7 @@ class EntryRepositoriesImplTest {
         repo.save(entry1);
         repo.save(entry2);
         repo.save(entry3);
-        assertEquals(3, repo.count());
+        assertEquals(3, repo.countEntry());
 //        Entry getId = repo.getEntryById(100);
 //        assertNull(getId);
     }
@@ -58,11 +58,10 @@ class EntryRepositoriesImplTest {
         repo.save(entry2);
         repo.save(entry3);
         repo.save(entry4);
-        assertEquals(4, repo.count());
+        assertEquals(4, repo.countEntry());
         repo.delete(entry2);
         repo.delete(entry3);
-        assertEquals(2, repo.count());
-
+        assertEquals(2, repo.countEntry());
     }
 
 

@@ -4,7 +4,6 @@ import DiaryApplication.data.models.Diary;
 import DiaryApplication.data.repositories.DiaryRepositories;
 import DiaryApplication.data.repositories.DiaryRepositoriesImply;
 
-import java.sql.SQLOutput;
 import java.util.Objects;
 
 public class DiaryServiceImply implements DiaryService {
@@ -48,6 +47,10 @@ public class DiaryServiceImply implements DiaryService {
              }
             else throw new Exception();
         }
+    }
+
+    public int countEntry(){
+        return entryService.countEntries();
     }
 
 }
